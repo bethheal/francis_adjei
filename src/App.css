@@ -31,3 +31,18 @@ body {
   height: 100vh;
   position: relative;
 }
+.swiper-pagination-bullet {
+  width: 90px; /* Make the bullets rectangular */
+  height: 90px;
+  border-radius: 0; /* Remove rounded edges */
+  background: #ddd; /* Default color */
+  transition: background 0.3s ease; /* Smooth hover transition */
+}
+
+.swiper-pagination-bullet-active {
+  background: orange; /* Active bullet color */
+}
+
+.swiper-pagination-bullet:hover {
+  background: orange; /* Change color to orange on hover */
+}

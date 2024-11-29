@@ -13,10 +13,12 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // Close the menu after clicking
+    } else {
+      console.error(`Section with id "${sectionId}" not found`);
     }
-    setIsOpen(false); // Close the menu after clicking
   };
-
+  
   // Function to handle intersection observer for active section highlighting
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,24 +58,25 @@ const Navbar = ({ activeSection, setActiveSection }) => {
 
       {/* Navigation Links - Hidden on small screens, shown on large screens */}
       <div
-        className={`${
-          isOpen ? "flex" : "hidden"
-        } md:flex flex-col md:flex-row md:space-x-8 text-lg md:items-center absolute md:static top-16 left-0 right-0 bg-gradient-to-r from-bgColor to-[#4F0945] md:bg-transparent px-6 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out`}
-      >
-        {K.NAVLINKS.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => scrollToSection(item.id)}
-            className={`py-2 md:py-0 hover:text-slate-700 transition-colors duration-300 ${
-              activeSection === item.id
-                ? "underline decoration-orange-500 decoration-2 underline-offset-4"
-                : ""
-            }`}
-          >
-            {item.name}
-          </button>
-        ))}
-      </div>
+      className={`${
+        isOpen ? "flex" : "hidden"
+      } md:flex flex-col md:flex-row md:space-x-8 text-lg md:items-center absolute md:static top-16 left-0 right-0 bg-gradient-to-r from-bgColor to-[#4F0945] md:bg-transparent px-6 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out`}
+    >
+      {K.NAVLINKS.map((item) => (
+        <button
+          key={item.id}
+          onClick={() => scrollToSection(item.id)}
+          className={`py-2 md:py-0 hover:text-slate-700 transition-colors duration-300 ${
+            activeSection === item.id
+              ? "underline decoration-orange-500 decoration-2 underline-offset-4"
+              : ""
+          }`}
+        >
+          {item.name}
+        </button>
+      ))}
+    </div>
+    
     </nav>
   );
 };
