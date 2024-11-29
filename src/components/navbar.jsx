@@ -45,7 +45,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
   return (
     <nav className="bg-white flex-row text-fontColors px-6 py-4 fixed top-0 left-0 w-full z-50 flex justify-between items-center shadow-lg">
       {/* Mobile Menu Icon (Visible only on small screens) */}
-      <div className="md:hidden flex items-center">
+      <div className="md:hidden flex items-center bg-orange-500">
         <button onClick={toggleMenu} aria-label="Toggle Menu">
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
@@ -60,21 +60,23 @@ const Navbar = ({ activeSection, setActiveSection }) => {
       <div
       className={`${
         isOpen ? "flex" : "hidden"
-      } md:flex flex-col md:flex-row md:space-x-8 text-lg md:items-center absolute md:static top-16 left-0 right-0 bg-gradient-to-r from-bgColor to-[#4F0945] md:bg-transparent px-6 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out`}
+      } md:flex flex-col md:flex-row md:space-x-8 text-lg md:items-center absolute md:static top-16 left-0 right-0 bg-orange-500  px-6 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out`}
     >
-      {K.NAVLINKS.map((item) => (
-        <button
-          key={item.id}
-          onClick={() => scrollToSection(item.id)}
-          className={`py-2 md:py-0 hover:text-slate-700 transition-colors duration-300 ${
-            activeSection === item.id
-              ? "underline decoration-orange-500 decoration-2 underline-offset-4"
-              : ""
-          }`}
-        >
-          {item.name}
-        </button>
-      ))}
+     {K.NAVLINKS.map((item) => (
+  <button
+    key={item.id}
+    onClick={() => scrollToSection(item.id)}
+    className={`py-2 md:py-0 transition-colors duration-300 
+      hover:text-white md:hover:text-white 
+      ${activeSection === item.id 
+        ? "underline decoration-2 underline-offset-4 decoration-white md:decoration-white" 
+        : "hover:decoration-white md:hover:decoration-white"
+      }`}
+  >
+    {item.name}
+  </button>
+))}
+
     </div>
     
     </nav>
