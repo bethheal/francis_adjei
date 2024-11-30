@@ -6,8 +6,8 @@ import Home from './pages/heroSection/home';
 import About from './pages/aboutSection/about';
 import Contact from './pages/contactSection/contact';
 import Services from './pages/servicesSection/services';
-import Navbar from './components/Navbar';
 import Footer from './components/footer';
+import Navbar from './components/navbar';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
