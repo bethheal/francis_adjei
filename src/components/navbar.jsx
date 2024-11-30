@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+
 import K from "../constants/index";
 
 const Navbar = ({ activeSection, setActiveSection }) => {
