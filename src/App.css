@@ -23,7 +23,7 @@ body {
 } */
 
 .bgImg{
-  background-image: url(./assets/images/herobgImg.jpg);
+  background-image: url(./assets/images/herobgImg.png);
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -31,6 +31,16 @@ body {
   height: 100vh;
   position: relative;
 }
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure overlay stays behind content */
+}
+
 .swiper-pagination-bullet {
   width: 90px; /* Make the bullets rectangular */
   height: 90px;

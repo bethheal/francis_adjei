@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import K from "../constants/index";
+import { logo } from "../assets";
 
 const Navbar = ({ activeSection, setActiveSection }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
       console.error(`Section with id "${sectionId}" not found`);
     }
   };
-  
+
   // Function to handle intersection observer for active section highlighting
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,32 +55,31 @@ const Navbar = ({ activeSection, setActiveSection }) => {
 
       {/* Logo - Centered on both small and large screens */}
       <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none text-4xl font-bold cursor-pointer">
-        LOGO
+        <img src={logo} alt="logo" className="w-14 h-10" />
       </div>
 
       {/* Navigation Links - Hidden on small screens, shown on large screens */}
       <div
-      className={`${
-        isOpen ? "flex" : "hidden"
-      } md:flex flex-col md:flex-row md:space-x-8 text-lg md:items-center absolute md:static top-16 left-0 right-0 bg-orange-500  px-6 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out`}
-    >
-     {K.NAVLINKS.map((item) => (
-  <button
-    key={item.id}
-    onClick={() => scrollToSection(item.id)}
-    className={`py-2 md:py-0 transition-colors duration-300 
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } md:flex flex-col md:flex-row md:space-x-8 text-lg md:items-center absolute md:static top-16 left-0 right-0 bg-orange-500  px-6 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out`}
+      >
+        {K.NAVLINKS.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => scrollToSection(item.id)}
+            className={`py-2 md:py-0 transition-colors duration-300 
       hover:text-white md:hover:text-white 
-      ${activeSection === item.id 
-        ? "underline decoration-2 underline-offset-4 decoration-white md:decoration-white" 
-        : "hover:decoration-white md:hover:decoration-white"
+      ${
+        activeSection === item.id
+          ? "underline decoration-2 underline-offset-4 decoration-white md:decoration-white"
+          : "hover:decoration-white md:hover:decoration-white"
       }`}
-  >
-    {item.name}
-  </button>
-))}
-
-    </div>
-    
+          >
+            {item.name}
+          </button>
+        ))}
+      </div>
     </nav>
   );
 };

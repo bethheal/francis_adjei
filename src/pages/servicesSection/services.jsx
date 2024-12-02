@@ -1,46 +1,65 @@
 import React from "react";
 import SwiperComponent from "./swiper";
 import { testimonalsImg } from "../../assets";
+import services from "./constant"; // Import services from the constant file
 
 const Services = () => {
   return (
     <section id="services">
       <div className="m-5 md:m-20 text-slate-700 my-10 md:my-20">
-      <div className="my-5 md:my-10 text-center">
-        <p className="font-roboto text-base md:text-lg">OUR SERVICES</p>
-        <h2 className="font-oswald text-3xl md:text-6xl">WHAT WE OFFER</h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-4 md:gap-y-4 p-5 md:p-20">
-        <div className="bg-[#f7f7f7] flex items-center justify-center w-full h-48 md:h-96">
-          Text 1
+        {/* Header Section */}
+        <div className="my-5 md:my-10 text-center">
+          <p className="font-roboto text-base md:text-lg">OUR SERVICES & PRODUCTS</p>
+          <h2 className="font-oswald text-3xl md:text-6xl">WHAT WE OFFER</h2>
         </div>
-        <div className="bg-orange-500 text-white flex items-center justify-center h-48 md:h-96">
-          Image 1
-        </div>
-        <div className="bg-orange-500 flex items-center justify-center w-full h-48 md:h-96">
-          Image
-        </div>
-        <div className="bg-[#f7f7f7] text-white flex items-center justify-center h-48 md:h-96">
-          Text 2
-        </div>
-      </div>
-      <div className="flex flex-col md:flex-row justify-between items-center mx-5 md:mx-20 w-full">
-        {/* Left side */}
-        <span className="w-full md:w-1/2 flex items-center justify-center mb-5 md:mb-0">
-          <img
-            src={testimonalsImg}
-            alt="Testimonials"
-            className="w-full max-w-sm md:max-w-full"
-          />
-        </span>
 
-        {/* Right side */}
-        <div className="w-full md:w-1/2 flex items-center p-5 md:p-10 justify-center">
-          <SwiperComponent />
+        {/* Services Mapping */}
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-4 md:gap-y-4 p-5 md:p-20"
+          >
+            {/* Service Content */}
+            <div className="bg-[#f7f7f7] flex items-center justify-center w-full h-48 md:h-96 p-4">
+              <div className="text-center max-w-2xl">
+                <h4 className="text-lg font-oswald my-5">{service.title}</h4>
+                <p className="text-slate-700 text-sm">{service.description}</p>
+                <p className="list-disc text-sm text-orange-500 ml-5">
+                  {service.products.map((product, idx) => (
+                    <span key={idx} className="block">
+                      {product}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </div>
+
+            {/* Service Image */}
+            <div className="bg-orange-500 text-white items-center justify-center h-48 md:h-96 hidden md:block">
+              <img
+                src={service.image} // Use the imported image directly
+                alt={service.alt}
+                className="object-cover h-full w-full"
+              />
+            </div>
+          </div>
+        ))}
+
+        {/* Testimonials Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center mx-5 md:mx-20 w-full">
+          <span className="w-full md:w-1/2 flex items-center justify-center mb-5 md:mb-0">
+            <img
+              src={testimonalsImg}
+              alt="Testimonials"
+              className="w-full max-w-sm md:max-w-full"
+            />
+          </span>
+
+          <div className="w-full md:w-1/2 flex items-center p-5 md:p-10 justify-center">
+            <SwiperComponent />
+          </div>
         </div>
       </div>
-    </div>
-
     </section>
   );
 };
