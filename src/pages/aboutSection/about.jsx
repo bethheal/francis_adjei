@@ -3,15 +3,13 @@ import React from "react";
 const About = () => {
   return (
     <section id="about">
-      <div className="font-oswald flex flex-col justify-center items-center m-20 px-4">
+      <div className="font-oswald flex flex-col justify-center items-center m-5 md:m-20 px-4">
         <div className="text-center max-w-2xl">
           {/* Section Title */}
           <h5 className="text-slate-700 text-sm my-4">ABOUT OUR PRODUCT</h5>
           
           {/* Heading */}
-          <h2 className="text-2xl my-5">
-            Who We Are
-          </h2>
+          <h2 className="text-2xl my-5">Who We Are</h2>
           
           {/* Description about the company */}
           <p className="text-slate-700 text-lg font-roboto">
@@ -31,15 +29,14 @@ const About = () => {
           </p>
           
           {/* Button to read more */}
-          <button className="m-20">
-  <a
-    href="#"  // Link to a detailed About Us page
-    className="font-oswald bg-black hover:bg-orange-500 text-slate-700 text-[16px] font-lato font-semibold tracking-wider py-4 px-6 border-[5px] border-white hover:border-white rounded-full transition duration-150"
-  >
-    READ MORE
-  </a>
-</button>
-
+          <div className="mt-10 flex justify-center">
+            <a
+              href="#" // Link to a detailed About Us page
+              className="font-oswald bg-black hover:bg-orange-500 text-white text-base font-lato font-semibold tracking-wider py-3 px-8 border-[3px] border-white hover:border-white rounded-full transition duration-150 whitespace-nowrap"
+            >
+              READ MORE
+            </a>
+          </div>
         </div>
       </div>
     </section>

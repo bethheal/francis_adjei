@@ -1,4 +1,4 @@
-import { Instagram, MapPin, Phone, Mail, Globe, Download } from "lucide-react";
+import { Instagram, MapPin, Phone, Mail, Globe, Download, MailCheck } from "lucide-react";
 import { f1, f2, f3, f4, f5, f6 } from "../../assets";
 
 const Contact = () => {
@@ -71,10 +71,10 @@ const Contact = () => {
                     </a>
                   </li>
                   <li className="mb-4 flex items-center">
-                    <Mail className="mr-2" />
+                    <MailCheck className="mr-2" />
                     <a
                       href="#"
-                      className="hover:underline hover:text-orange-500"
+                      className="hover:underline text-xs hover:text-orange-500"
                     >
                       greensynergyco.ltd@gmail.com{" "}
                     </a>
