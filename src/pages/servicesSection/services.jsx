@@ -21,7 +21,7 @@ const Services = () => {
           >
             {/* Service Content */}
             <div className="bg-[#f7f7f7] flex items-center justify-center w-full h-auto p-4">
-              <div className="text-center max-w-lg">
+              <div className="text-left max-w-lg">
                 <h4 className="text-md md:text-lg font-oswald my-3">{service.title}</h4>
                 <p className="text-slate-700 text-sm md:text-base">{service.description}</p>
                 <ul className="list-disc text-sm md:text-base text-orange-500 ml-5 text-left">

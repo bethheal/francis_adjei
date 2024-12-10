@@ -1,4 +1,4 @@
-import { Instagram, MapPin, Phone, Mail, Globe, Download, MailCheck } from "lucide-react";
+import { Instagram, MapPin, Phone, Mail, Globe, Download, MailCheck, FacebookIcon, LinkedinIcon } from "lucide-react";
 import { f1, f2, f3, f4, f5, f6 } from "../../assets";
 
 const Contact = () => {
@@ -10,7 +10,7 @@ const Contact = () => {
     "https://www.instagram.com/company5",
     "https://www.instagram.com/company6",
   ];
-  const footerImages = [f1, f2, f3, f4, f5, f6];
+  const footerImages = [f1, f2, f4, f3,  f5, f6];
 
   return (
     <section id="contact">
@@ -146,18 +146,24 @@ const Contact = () => {
               </span>
               <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/greensynergylimitedcompany/profilecard/?igsh=bGRidjVheWowcGF6 "
                   className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
                 >
                   <Instagram />
                   <span className="sr-only">IG page</span>
                 </a>
-
                 <a
-                  href="#"
+                  href="https://web.facebook.com/greensynergyghana/?_rdc=1&_rdr#"
                   className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
                 >
-                  <Globe />
+                  <LinkedinIcon />
+                  <span className="sr-only">Download</span>
+                </a>
+                <a
+                  href="https://web.facebook.com/greensynergyghana/?_rdc=1&_rdr#"
+                  className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  <FacebookIcon />
                   <span className="sr-only">Download</span>
                 </a>
               </div>

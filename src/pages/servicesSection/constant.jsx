@@ -8,7 +8,7 @@ const services = [
     title: "Transforming Surplus Vegetables into High-Quality Beauty Products",
     description:
       "Green Synergy Limited produces organic cosmetics from surplus vegetables, rich in nutrients and antioxidants, supporting sustainability and eco-friendly practices.",
-    products: ["Shower Gels", "Scrubs"],
+    products: ["Shower Gels", "Oils"],
     image: Img1, // Use imported image directly
     alt: "Organic Cosmetics",
   },
@@ -17,9 +17,9 @@ const services = [
     description:
       "At Green Synergy Limited, we produce eco-friendly fertilizers from by-products of our manufacturing process. These fertilizers improve soil health and support sustainable farming practices.",
     products: [
-      "Calcium-Rich Fertilizers",
-      "Organic Compost",
-      "Soil Conditioners",
+      // "Calcium-Rich Fertilizers",
+      // "Organic Compost",
+      // "Soil Conditioners",
     ],
     image: Img2, // Use imported image directly
     alt: "Eco-Friendly Fertilizers",
@@ -31,7 +31,6 @@ const services = [
     products: [
       "Workshops on Sustainable Farming",
       "Environmental Sustainability Education",
-      "Waste Management Solutions",
     ],
     image: Img3, // Use imported image directly
     alt: "Sustainable Agriculture Solutions",
