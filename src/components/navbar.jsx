@@ -54,8 +54,9 @@ const Navbar = ({ activeSection, setActiveSection }) => {
       </div>
 
       {/* Logo - Centered on both small and large screens */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none text-4xl font-bold cursor-pointer">
+      <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none flex items-center gap-2 text-4xl font-bold cursor-pointer">
         <img src={logo} alt="logo" className="w-14 h-10" />
+        <p className="text-xs">Green Synergy Company Limited</p>
       </div>
 
       {/* Navigation Links - Hidden on small screens, shown on large screens */}
