@@ -30,7 +30,7 @@ const Hero = () => {
             <img
               src={heroImg1}
               alt="Slide 1"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-center"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-5">
@@ -60,7 +60,7 @@ const Hero = () => {
             <img
               src={heroImg2}
               alt="Slide 2"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-center"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           </div>
@@ -68,31 +68,30 @@ const Hero = () => {
 
         {/* Slide 3 */}
         <SwiperSlide>
-  <div className="relative h-full">
-    <img
-      src={Img1}
-      alt="Slide 3"
-      className="w-full h-full object-cover"
-    />
-    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-5 backdrop-blur-sm">
-      <p className="font-roboto text-[#FFFFF0] text-3xl md:text-2xl lg:text-3xl py-5 w-full sm:w-[40rem]">
-        Transforming surplus vegetables into high-quality cosmetics and
-        eco-friendly fertilizers to promote sustainability and enhance farm
-        productivity.
-      </p>
-      <p className="text-lg md:text-lg py-10">
-        <a
-          href="#about"
-          className="text-[#FFFFF0] hover:text-orange-500 transition duration-300 underline decoration-2 underline-offset-8"
-        >
-          LEARN MORE
-        </a>
-      </p>
-    </div>
-  </div>
-</SwiperSlide>
-
+          <div className="relative h-full">
+            <img
+              src={Img1}
+              alt="Slide 3"
+              className="w-full h-full object-cover md:object-center"
+              />
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-5 backdrop-blur-sm">
+              <p className="font-roboto text-[#FFFFF0] text-3xl md:text-2xl lg:text-3xl py-5 w-full sm:w-[40rem]">
+                Transforming surplus vegetables into high-quality cosmetics and
+                eco-friendly fertilizers to promote sustainability and enhance
+                farm productivity.
+              </p>
+              <p className="text-lg md:text-lg py-10">
+                <a
+                  href="#about"
+                  className="text-[#FFFFF0] hover:text-orange-500 transition duration-300 underline decoration-2 underline-offset-8"
+                >
+                  LEARN MORE
+                </a>
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
 
       {/* Custom Navigation Buttons */}

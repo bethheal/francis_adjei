@@ -31,7 +31,7 @@ const About = () => {
           {/* Button to read more */}
           <div className="mt-10 flex justify-center">
             <a
-              href="#" // Link to a detailed About Us page
+              href="#team" // Link to a detailed About Us page
               className="font-oswald bg-black hover:bg-orange-500 text-white text-base font-lato font-semibold tracking-wider py-3 px-8 border-[3px] border-white hover:border-white rounded-full transition duration-150 whitespace-nowrap"
             >
               READ MORE
