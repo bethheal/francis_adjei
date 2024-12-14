@@ -19,12 +19,12 @@ const teamData = [
         imgSrc: FianacialHead,
         description:"Rebecca is a Career Technology graduate with expertise in financial management and accounting. She leads the procurement, budgeting, expenditure, and financial record-keeping at Green Synergy Limited. With a year of dedicated service, Rebecca continues to be the driving force behind our efficient financial systems."
     },
-    {
-        name: "NAME",
-        title: "HEAD OF FINANCIAL OPERATIONS",
-        imgSrc: FianacialHead,
-        description:"Name is a Career Technology graduate with expertise in financial management and accounting. She leads the procurement, budgeting, expenditure, and financial record-keeping at Green Synergy Limited. With a year of dedicated service, Rebecca continues to be the driving force behind our efficient financial systems."
-    },
+    // {
+    //     name: "Full name",
+    //     title: "HEAD OF FINANCIAL OPERATIONS",
+    //     imgSrc: FianacialHead,
+    //     description:"Name is a Career Technology graduate with expertise in financial management and accounting. She leads the procurement, budgeting, expenditure, and financial record-keeping at Green Synergy Limited. With a year of dedicated service, Rebecca continues to be the driving force behind our efficient financial systems."
+    // },
    
   ];
   

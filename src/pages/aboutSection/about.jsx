@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <section id="about">
-      <div className="font-oswald flex flex-col justify-center items-center m-5 md:m-20 px-4">
+      <div className="font-oswald flex flex-col justify-center items-center m-5 md:m-20 px-10">
         <div className="text-center max-w-2xl">
           {/* Section Title */}
           <h5 className="text-slate-700 text-sm my-4">ABOUT OUR PRODUCT</h5>

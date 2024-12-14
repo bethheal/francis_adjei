@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <section id="services">
 
-      <div className="m-5 md:m-20 text-slate-700 my-10 md:my-20">
+      <div className="m-5  md:m-20 text-slate-700 lg:my-40 sm:my-20 my-20 md:my-20">
         {/* Header Section */}
         <div className="my-5 md:my-10 text-center">
           <p className="font-roboto text-sm md:text-lg">OUR SERVICES & PRODUCTS</p>

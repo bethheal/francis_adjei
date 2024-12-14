@@ -6,13 +6,13 @@ const Team = () => {
     <section id="team">
       {/* Page Container */}
       <div className="flex items-center justify-center min-h-screen bg-white py-10 px-4">
-        <div className="flex flex-col w-full max-w-7xl">
+        <div className="flex flex-col font-oswald w-full max-w-7xl">
           {/* Meet the Team Header */}
           <div className="text-center mb-16">
-            <h1 className="text-gray-900 text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-gray-900 font-oswald text-4xl md:text-5xl font-bold mb-6">
               Meet the Team
             </h1>
-            <p className="text-gray-700 text-lg md:text-xl font-light leading-relaxed">
+            <p className="text-gray-700 font-roboto text-sm md:text-xl font-light ">
               At Green Synergy Limited, we are committed to revolutionizing the
               agricultural sector by tackling post-harvest losses in vegetable
               farming. With our innovative agro-processing methods, we transform
@@ -27,11 +27,11 @@ const Team = () => {
             {teamData.map((member, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="flex flex-col font-oswald items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <a href="#" className="block">
                   <img
-                    className="w-full h-auto rounded-xl drop-shadow-md hover:drop-shadow-xl transition-transform duration-300 transform hover:scale-105"
+                    className="w-full  h-auto rounded-xl drop-shadow-md hover:drop-shadow-xl transition-transform duration-300 transform hover:scale-105"
                     src={member.imgSrc}
                     alt={member.name}
                   />
@@ -43,7 +43,7 @@ const Team = () => {
                   <div className="text-gray-700 font-light mb-2">
                     {member.title}
                   </div>
-                  <p className="text-gray-600 text-sm md:text-base font-light">
+                  <p className="text-gray-600  font-roboto text-sm md:text-base font-normal">
                     {member.description}
                   </p>
                 </div>
