@@ -160,7 +160,7 @@ const Contact = () => {
                   <span className="sr-only">Download</span>
                 </a>
                 <a
-                  href="https://web.facebook.com/greensynergyghana/?_rdc=1&_rdr#"
+                  href="https://www.linkedin.com/company/105307222/admin/dashboard/"
                   className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
                 >
                   <FacebookIcon />
